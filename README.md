@@ -23,7 +23,7 @@ Se você ainda não possui uma conta no GitHub:
 > Fazer um *fork* significa criar uma cópia idêntica do repositório do professor diretamente dentro da sua própria conta do GitHub. Assim, você pode alterar códigos e realizar atividades sem modificar o projeto original.
 
 ### Passo a passo para o Fork:
-1. Abra o link do repositório do professor fornecido em aula.
+1. Copie o link desse repositório e abra no seu navegador.
 2. No canto superior direito da página, localize e clique no botão **Fork** (ícone de bifurcação).
 3. Na janela que se abrir:
    - Verifique se o **Owner** selecionado é o seu usuário.
