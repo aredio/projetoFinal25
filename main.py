@@ -3,8 +3,11 @@ listaDeProdutos = []
 opcao = -1
 while(opcao != 0):
     print("Sistema de Estoque")
-    print("1 - Cadastrar")
-    print("2 - Listar")
+    print("1 - Cadastrar produtos")
+    print("2 - Listar produtos")
+    print("3 - Adicionar quantidade em estoque")
+    print("4 - Remover quantidade em estoque")
+    print("5 - Excluir produto cadastrado")
     print("0 - Sair")
     opcao = int(input("Digite a opção desejada:"))
     if(opcao == 1):
@@ -25,6 +28,33 @@ while(opcao != 0):
             print("Categoria do produto: ", produto[3])
             print("Quantidade em estoque: ", produto[4])
             print("=============")
+    elif(opcao == 3):
+        print("Você escolheu: Adicionar quantidade em estoque")
+        codigo = int(input("Código do produto que deseja atualizar: "))
+        for produto in listaDeProdutos:
+            if produto[0] == codigo:
+                quantidade = int(input("Digite a quantidade para adicionar"))
+                produto[4] += quantidade
+                print("A quantidade em estoque desse produto agora é: ",produto[4])
+    elif(opcao == 4):
+        print("Você escolheu: Remover quantidade em estoque")
+        codigo = int(input("Código do produto que deseja atualizar: "))
+        for produto in listaDeProdutos:
+            if produto[0] == codigo:
+                quantidade = int(input("Digite a quantidade para remover: "))
+                if quantidade <= produto[4]:
+                    produto[4] -= quantidade
+                    print("A quantidade em estoque desse produto agora é: ",produto[4])
+                else:
+                    print("Quantidade insuficiente em estoque!")
+    elif(opcao == 5):
+        print("Você escolheu: Excluir produto")
+        codigo = int(input("Código do produto que deseja excluir: "))
+        for produto in listaDeProdutos:
+            if produto[0] == codigo:
+                listaDeProdutos.remove(produto)
+                print("Produto excluído com sucesso!")
+                break
     elif(opcao == 0):
         print("Você escolheu Sair do programa")
         break
